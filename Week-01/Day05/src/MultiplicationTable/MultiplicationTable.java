@@ -8,7 +8,7 @@ public class MultiplicationTable {
         System.out.println("Please provide a number!");
         x = sc1.nextInt();
         for ( int y = 1; y<11; ++y){
-            System.out.println();
+            System.out.format("%d * %d = %d%n", y,x,x*y);
         }
     }
 }
