@@ -1,6 +1,7 @@
 package VariableMutation;
 
 import javax.swing.*;
+import java.io.PrintStream;
 
 public class VariableMutation {
     public static void main(String[] args) {
@@ -33,11 +34,22 @@ public class VariableMutation {
         if ( h%11 > 0) {
             System.out.println(hi);
         }
-      
-            }
+        int i1 = 10;
+        int i2 = 3;
+        int i3 = i2*i2;
+        int i4 = i2*i2*i2;
+        boolean i = true;
+        if (i1>i3 && i1<i4 == true){
+            System.out.println(i);
+        }
+        int j = 1521;
+        boolean j1 = false;
+        if (j%3==0 || j%5==0 ){
+            System.out.println(j1);
+        }
         }
         }
 
-        }
+
 
 
