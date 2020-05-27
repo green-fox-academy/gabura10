@@ -8,6 +8,7 @@ public class PrintEachLine {
         try {
             File file = new File("my-file.txt");
             Scanner scan = new Scanner(file);
+            String filename = file.toString();
             while(scan.hasNextLine()){
                 System.out.println(scan.nextLine());
             }
