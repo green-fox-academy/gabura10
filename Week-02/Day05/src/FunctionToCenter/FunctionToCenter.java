@@ -3,7 +3,6 @@ package FunctionToCenter;
 import javax.swing.*;
 
 import java.awt.*;
-import java.util.Random;
 
 import static javax.swing.JFrame.EXIT_ON_CLOSE;
 
@@ -20,20 +19,17 @@ public class FunctionToCenter {
         int valtozo = 20;
         int xKordianata = 0;
         int yKordinata = 0;
-        int ismetles = 16;
+        int ismetles = WIDTH/valtozo;
         int bottom = 320;
         for (int i = 0; i <ismetles ; i++) {
             drawLine(xKordianata+i*valtozo,yKordinata,graphics);
             drawLine(xKordianata,yKordinata+i*valtozo,graphics);
             drawLine(bottom,xKordianata+i*valtozo,graphics);
-            drawLine(xKordianata+i*valtozo,bottom,graphics);
+           drawLine(xKordianata+i*valtozo,bottom,graphics);
 
         }
 
         }
-
-
-
 
 
     // Don't touch the code below
