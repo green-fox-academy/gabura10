@@ -14,8 +14,8 @@ public class Sponsor extends Person {
         hiredStudents++;
     }
     @Override
-    public void getGoal(){
-        System.out.println("Hire brilliant junior software developers");
+    protected String  specificGoal(){
+       return "Hire brilliant junior software developers";
     }
     @Override
     protected String specificIntroduce(){

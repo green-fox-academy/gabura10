@@ -21,6 +21,9 @@ public class Person {
         return "";
     }
     public void getGoal(){
-        System.out.println("My goal is: Live for the moment!");
+        System.out.println("My goal is: "+this.specificGoal());
+    }
+    protected String specificGoal(){
+        return "Live for the moment";
     }
 }

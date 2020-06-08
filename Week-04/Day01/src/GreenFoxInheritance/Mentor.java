@@ -10,8 +10,8 @@ public class Mentor extends Person {
         this.level = "intermediate";
     }
     @Override
-    public void getGoal(){
-        System.out.println("Educate brilliant junior software developers");
+    protected String specificGoal(){
+        return "Educate brilliant junior software developers";
     }
     @Override
     protected String specificIntroduce(){

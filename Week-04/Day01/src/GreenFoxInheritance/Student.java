@@ -17,8 +17,8 @@ public class Student extends Person {
 
 
     @Override
-    public void getGoal() {
-        System.out.println("Be a junior software developer");;
+    protected String specificGoal() {
+        return "Be a junior software developer";
     }
 
     @Override
