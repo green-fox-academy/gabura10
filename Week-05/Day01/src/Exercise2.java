@@ -1,3 +1,15 @@
-public class Exercise2 {
+import java.util.*;
 
+public class Exercise2 {
+    public static void main(String[] args) {
+        List<Integer> numbers = Arrays.asList(1, 3, -2, -4, -7, -3, -8, 12, 19, 6, 9, 10, 14);
+        numbers.stream()
+                .filter(l -> l >0)
+                .filter(Exercise2::checkPerfectSquare)
+                .forEach(System.out :: println);
+    }
+    public static boolean checkPerfectSquare(double x){
+        double sq = Math.sqrt(x);
+        return ((sq-Math.floor(sq))==0);
+    }
 }
