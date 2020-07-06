@@ -8,7 +8,7 @@ header{
     font-family: sans-serif;
     max-width: 100%;
     padding: 10px;
-    background-image: linear-gradient(to bottom, #2cd136 0%, #1e211e 100% );
+    background-image: linear-gradient(to bottom, #FF00FF 0%, #1e211e 100% );
 
 }
 th,tr,td{
@@ -30,7 +30,7 @@ td{
 }
 #searchButton {
     border: none;
-    background-image: linear-gradient(to right,#2F2F2F 0%, #5DD239 100% );
+    background-image: linear-gradient(to right,#2F2F2F 0%, #FF00FF 100% );
     padding: 3px;
     text-align: center;
     text-decoration: none;
@@ -61,11 +61,11 @@ hr{
     height: auto;
 }
 thead{
-    background-image: linear-gradient(to right,#2F2F2F 0%, #5DD239 100% );
+    background-image: linear-gradient(to right,#2F2F2F 0%, #FF00FF 100% );
     color:#E6E6E6 ;
 }
 #onlyAvailable{
-    background-image: linear-gradient(to right,#2F2F2F 0%, #5DD239 100% );
+    background-image: linear-gradient(to right,#2F2F2F 0%, #FF00FF 100% );
     border: none;
     color: white;
     padding: 3px;
@@ -78,7 +78,7 @@ thead{
     font-family: sans-serif;
 }
 #cheapest{
-    background-image: linear-gradient(to right,#2F2F2F 0%, #5DD239 100% );
+    background-image: linear-gradient(to right,#2F2F2F 0%, #FF00FF 100% );
     border: none;
     color: white;
     padding: 3px;
@@ -90,7 +90,7 @@ thead{
     border-radius: 5px;
 }
 #contains{
-    background-image: linear-gradient(to right,#2F2F2F 0%, #5DD239 100% );
+    background-image: linear-gradient(to right,#2F2F2F 0%, #FF00FF 100% );
     border: none;
     color: white;
     padding: 3px;
@@ -102,7 +102,7 @@ thead{
     border-radius: 5px;
 }
 #average{
-    background-image: linear-gradient(to right,#2F2F2F 0%, #5DD239 100% );
+    background-image: linear-gradient(to right,#2F2F2F 0%, #FF00FF 100% );
     border: none;
     color: white;
     padding: 3px;
@@ -114,7 +114,7 @@ thead{
     border-radius: 5px;
 }
 #mostExp{
-    background-image: linear-gradient(to right,#2F2F2F 0%, #5DD239 100% );
+    background-image: linear-gradient(to right,#2F2F2F 0%, #FF00FF 100% );
     border: none;
     color: white;
     padding: 3px;
@@ -136,7 +136,7 @@ thead{
 }img{
     position: absolute;
     left: 90%;
-    top: 50px;
+    top: 40px;
  }
 #name{
     text-align: left;
@@ -161,6 +161,11 @@ thead{
 }
 #exactly{
     margin:5px 10px;
+}
+h4{
+    float: right;
+    text-align: right;
+    margin: 0px 0px 0px 5px;
 }
 
 

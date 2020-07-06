@@ -79,11 +79,11 @@ public class controller {
     @PostMapping("/search")
     public String search(@RequestParam String search, Model model) {
         List<ShopItem> optionalShopItems = listOfItems.stream()
-                .filter(c->c.getName().toLowerCase().contains(search))
+                .filter(c->c.getName().toLowerCase().contains(search.toLowerCase()))
                 .collect(Collectors.toList());
         if (optionalShopItems.isEmpty()){
             List<ShopItem> optionalShopItems2 = listOfItems.stream()
-                    .filter(c->c.getDescription().toLowerCase().contains(search))
+                    .filter(c->c.getDescription().toLowerCase().contains(search.toLowerCase()))
                     .collect(Collectors.toList());
             model.addAttribute("items",optionalShopItems2);
         }else {
