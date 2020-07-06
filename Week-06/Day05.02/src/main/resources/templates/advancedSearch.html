@@ -19,10 +19,14 @@
 </head>
 <body>
 <div id = "content">
-    <h3><a href="/advancedSearch">>Advanced Search</a></h3>
-    <form action="/search" method="post">
-        <input type="text" placeholder="..Search" id="search" name="search">
-        <button type="submit">Search</button>
+    <h3><a href="/advancedSearch" id="advancedSearch">>Advanced Search</a></h3>
+    <br>
+    <form action="/advanced-search" method="get">
+        <button type="submit" name="action" value="below" id="below">Below</button>
+        <button type="submit" name="action" value="above" id="above">Above</button>
+        <button type="submit" name="action" value="exactly" id="exactly">Exactly</button>
+        <p id="filler">Filler by price:</p>
+        <input type="number" placeholder="..e.g.:300" id="search" name="searchValue">
     </form>
     <table>
         <thead>

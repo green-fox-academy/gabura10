@@ -91,29 +91,32 @@ public class controller {
         }
         return "index";
     }
-    @PostMapping("/advanced-search-above")
-    public String advancedSearchAbove(@RequestParam int searchValue, Model model){
-        List<ShopItem> optionalShopItems = listOfItems.stream()
-                .filter(c-> c.getPrice() > searchValue)
-                .collect(Collectors.toList());
-        model.addAttribute("items", optionalShopItems);
-        return "index";
-    }
-    @PostMapping("/advanced-search-below")
-    public String advancedSearchBelow(@RequestParam int searchValue, Model model) {
-        List<ShopItem> optionalShopItems = listOfItems.stream()
-                .filter(c -> c.getPrice() < searchValue)
-                .collect(Collectors.toList());
-        model.addAttribute("items", optionalShopItems);
-        return "index";
-    }
-    @PostMapping("/advanced-search-exactly")
-    public String advancedSearchExactly(@RequestParam int searchValue, Model model) {
-        List<ShopItem> optionalShopItems = listOfItems.stream()
-                .filter(c -> c.getPrice() == searchValue)
-                .collect(Collectors.toList());
-        model.addAttribute("items", optionalShopItems);
-        return "index";
+    @GetMapping("/advanced-search")
+    public String advancedSearchAbove(int searchValue,String action, Model model){
+        switch (action) {
+            case "below": {
+                List<ShopItem> optionalShopItems = listOfItems.stream()
+                        .filter(c -> c.getPrice() < searchValue)
+                        .collect(Collectors.toList());
+                model.addAttribute("items", optionalShopItems);
+                break;
+            }
+            case "above": {
+                List<ShopItem> optionalShopItems = listOfItems.stream()
+                        .filter(c -> c.getPrice() > searchValue)
+                        .collect(Collectors.toList());
+                model.addAttribute("items", optionalShopItems);
+                break;
+            }
+            case "exactly": {
+                List<ShopItem> optionalShopItems = listOfItems.stream()
+                        .filter(c -> c.getPrice() == searchValue)
+                        .collect(Collectors.toList());
+                model.addAttribute("items", optionalShopItems);
+                break;
+            }
+        }
+        return "advancedSearch";
     }
     @GetMapping("/advancedSearch")
     public String advancedSearch(Model model){
