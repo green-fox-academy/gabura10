@@ -133,7 +133,8 @@ thead{
     font-family: sans-serif;
     margin: 0px 5px 0px 0px;
     font-size: 20px;
-}img{
+}
+img{
     position: absolute;
     left: 90%;
     top: 40px;
@@ -154,7 +155,7 @@ thead{
     margin: 0px 25px 0px 0px;
 }
 #below{
-    margin: 5px 10px;
+    margin: 5px 10px 5px 50px;
 }
 #above{
     margin:5px 10px;
@@ -166,6 +167,29 @@ h4{
     float: right;
     text-align: right;
     margin: 0px 0px 0px 5px;
+}
+#sanyi{
+    position: absolute;
+    left: 57%;
+    top: 5px;
+}
+button{
+    background-image: linear-gradient(to right,#2F2F2F 0%, #FF00FF 100% );
+    border: none;
+    color: white;
+    padding: 10px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 10px;
+    margin: 0px 5px 0px 0px;
+    border-radius: 10px;
+
+}
+#johny{
+    position: absolute;
+    left: 180px;
+    top: 138px;
 }
 
 
