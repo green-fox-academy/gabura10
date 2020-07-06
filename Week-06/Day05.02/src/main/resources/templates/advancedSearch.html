@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+    <link rel="stylesheet" th:href="@{style.css}" />
+    <meta charset="UTF-8">
+    <title>Webshop</title>
+    <header>
+        <h1><a href="/" id="myShop">My shop</a></h1>
+        <a href="only-available" id="onlyAvailable">Only Available</a>
+        <a href="cheapest-first" id="cheapest">Cheapest First</a>
+        <a href="contains-nike" id="contains">Contains Nike</a>
+        <a href="average-stock" id="average">Average Stock</a>
+        <a href="most-expensive" id="mostExp">Most Expensive Available</a>
+        <a href="https://www.greenfoxacademy.com/">
+            <img src="greenfox.jpg" alt="fox" width="50" height="50">
+        </a>
+        <hr>
+    </header>
+</head>
+<body>
+<div id = "content">
+    <h3><a href="/advancedSearch">>Advanced Search</a></h3>
+    <form action="/search" method="post">
+        <input type="text" placeholder="..Search" id="search" name="search">
+        <button type="submit">Search</button>
+    </form>
+    <table>
+        <thead>
+        <th rowspan="2">Name</th>
+        <th rowspan="2">Description</th>
+        <th rowspan="2">Price</th>
+        <th rowspan="2">Quantity</th>
+        </thead>
+        <tr th:each="shopitem : ${items}">
+            <td th:text="${shopitem.name}" id = "name"></td>
+            <td th:text="${shopitem.description} "id= "description"></td>
+            <td th:text="${shopitem.price}+ ' Ft'"id= "price"></td>
+            <td th:text="${shopitem.quantityOfStock}"id= "quantity"></td>
+        </tr>
+    </table>
+</div>
+</body>
+</html>
